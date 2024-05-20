@@ -19,6 +19,8 @@ services:
       WORDPRESS_DB_NAME: exampledb
     volumes:
       - wordpress:/var/www/html
+    networks:
+      - wordpress-vernice
 
   db:
     image: mysql:8.0
@@ -30,6 +32,8 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
       - db:/var/lib/mysql
+    networks:
+      - wordpress-vernice
 
 volumes:
   wordpress:
@@ -40,4 +44,10 @@ secrets:
     file: wordpress_db_password.txt
   my_sql_password:
     file: my_sql_password.txt
+
+
+networks:
+  wordpress-vernice:
+  
+  
    
