@@ -27,7 +27,7 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
+      MYSQL_USER: poquiddeinnideu-8311@yopmail.com
       MYSQL_PASSWORD: run/secrets/my_sql_password
       MYSQL_RANDOM_ROOT_PASSWORD: '1'
     volumes:
